@@ -16,11 +16,12 @@ RUN	apt-get -o 'Acquire::CompressionTypes::Order::="gz"' update && \
 	/usr/bin/composer self-update && \
 	echo "source ~/.aliases" >> /root/.bashrc
 
-RUN mkdir -p /var/composer
+RUN mkdir -p /data/cache/composer && mkdir -p /data/cache/bower
 
-VOLUME ["/var/composer"]
+VOLUME ["/var/cache"]
 
-ENV COMPOSER_HOME /var/composer
+ENV COMPOSER_HOME /data/cache/composer
+COPY config/bowerrc /root/.bowerrc
 COPY config/aliases /root/.aliases
 
 CMD ["/bin/bash"]
