@@ -4,3 +4,4 @@ Contains programs needed for PHP development:
 * composer
 * grunt
 * bower
+* ssh-client

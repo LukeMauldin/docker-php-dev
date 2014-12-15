@@ -4,6 +4,8 @@ RUN	apt-get -o 'Acquire::CompressionTypes::Order::="gz"' update && \
 	apt-get install -y --no-install-recommends \
 	curl \
 	git \
+	less \
+	openssh-client \
 	nano && \
 	curl -o /root/node.tar.gz http://nodejs.org/dist/v0.10.33/node-v0.10.33-linux-x64.tar.gz && \
 	cd /usr/local && \
