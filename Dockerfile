@@ -18,7 +18,7 @@ RUN	apt-get -o 'Acquire::CompressionTypes::Order::="gz"' update && \
 
 RUN mkdir -p /data/cache/composer && mkdir -p /data/cache/bower
 
-VOLUME ["/var/cache"]
+VOLUME ["/data/cache"]
 
 ENV COMPOSER_HOME /data/cache/composer
 COPY config/bowerrc /root/.bowerrc
