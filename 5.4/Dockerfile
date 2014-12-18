@@ -1,4 +1,4 @@
-FROM lukemauldin/docker-php-laravel
+FROM lukemauldin/docker-php-laravel:5.4
 
 RUN	apt-get -o 'Acquire::CompressionTypes::Order::="gz"' update && \
 	apt-get install -y --no-install-recommends \
