@@ -7,7 +7,7 @@ RUN	apt-get -o 'Acquire::CompressionTypes::Order::="gz"' update && \
 	less \
 	openssh-client \
 	nano && \
-	curl -o /root/node.tar.gz http://nodejs.org/dist/v0.12.2/node-v0.12.2.tar.gz && \
+	curl -o /root/node.tar.gz http://nodejs.org/dist/v0.12.2/node-v0.12.2-linux-x64.tar.gz && \
 	cd /usr/local && \
 	tar --strip-components 1 -xzf /root/node.tar.gz && \
 	rm /root/node.tar.gz && \
