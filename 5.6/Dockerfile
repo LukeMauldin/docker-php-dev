@@ -7,11 +7,11 @@ RUN	apt-get -o 'Acquire::CompressionTypes::Order::="gz"' update && \
 	less \
 	openssh-client \
 	nano && \
-	curl -o /root/node.tar.gz http://nodejs.org/dist/v0.12.4/node-v0.12.4-linux-x64.tar.gz && \
+	curl -o /root/node.tar.gz http://nodejs.org/dist/v0.12.5/node-v0.12.5-linux-x64.tar.gz && \
 	cd /usr/local && \
 	tar --strip-components 1 -xzf /root/node.tar.gz && \
 	rm /root/node.tar.gz && \
-	npm install -g grunt-cli bower && \
+	npm install -g grunt-cli bower gulp && \
 	curl -sS https://getcomposer.org/installer | php -- --filename=composer --install-dir=/usr/bin && \
 	/usr/bin/composer self-update && \
 	echo "source ~/.aliases" >> /root/.bashrc
